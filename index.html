@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en" data-color-scheme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vansh Maurya's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Three.js and GSAP Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three/0.160.0/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loadingScreen" class="loading-screen">
+        <div class="loader-container">
+            <div class="loader-3d" id="loader3D"></div>
+            <div class="loader-text">
+                <h2 class="loading-title">INITIALIZING</h2>
+                <div class="loading-progress">
+                    <div class="progress-bar" id="progressBar"></div>
+                </div>
+                <p class="loading-subtitle">Preparing 3D Experience...</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cursor Follower -->
+    <div class="cursor-follower" id="cursorFollower"></div>
+
+    <!-- Navigation -->
+    <nav class="nav-3d" id="nav3D">
+        <div class="nav-brand">
+            <h2 class="brand-text">Vansh Maurya</h2>
+        </div>
+        <ul class="nav-menu-3d">
+            <li class="nav-item-3d" onclick="location.href='#hero';">
+                <span class="nav-text">Home</span>
+                <div class="nav-glow"></div>
+            </li>
+            <li class="nav-item-3d" onclick="location.href='#about';">
+                <span class="nav-text">About</span>
+                <div class="nav-glow"></div>
+            </li>
+            <li class="nav-item-3d" onclick="location.href='#projects';">
+                <span class="nav-text">Projects</span>
+                <div class="nav-glow"></div>
+            </li>
+            <li class="nav-item-3d" onclick="location.href='#skills';">
+                <span class="nav-text">Skills</span>
+                <div class="nav-glow"></div>
+            </li>
+            <li class="nav-item-3d" onclick="location.href='#contact';">
+                <span class="nav-text">Contact</span>
+                <div class="nav-glow"></div>
+            </li>
+        </ul>
+        <!-- <div class="nav-controls">
+            <button class="control-btn" id="audioToggle">
+                <span class="control-text">AUDIO: OFF</span>
+            </button>
+        </div> -->
+    </nav>
+
+    <!-- Hero Section with 3D Canvas -->
+    <section id="hero" class="hero-3d">
+        <canvas id="heroCanvas" class="hero-canvas"></canvas>
+        <div class="hero-content-3d">
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-value">1+</span>
+                    <span class="stat-label">Years</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">10+</span>
+                    <span class="stat-label">Projects</span>
+                </div>
+                <!-- <div class="stat-item">
+                    <span class="stat-value">40+</span>
+                    <span class="stat-label">Clients</span>
+                </div> -->
+                <div class="stat-item">
+                    <span class="stat-value">5+</span>
+                    <span class="stat-label">Awards</span>
+                </div>
+            </div>
+            <div class="hero-main">
+                <h1 class="hero-title-3d">
+                    <span class="title-line">Vansh</span>
+                    <span class="title-line">Maurya</span>
+                </h1>
+                <p class="hero-tagline-3d">Web Developer & Creative Technologist</p>
+                <p class="hero-subtitle-3d">Creating Immersive Digital Experiences</p>
+                <div class="hero-actions">
+                    <button class="cta-btn-3d" onclick="location.href='#projects';">
+                        <span class="btn-text">EXPLORE WORK</span>
+                        <div class="btn-glow"></div>
+                    </button>
+                    <a href="mailto:vanshmaurya01234@gmail.com" class="contact-btn-3d">
+                        <span class="btn-text">GET IN TOUCH</span>
+                    </a>
+                </div>
+            </div>
+            <!-- <div class="hero-controls">
+                <div class="control-hint">
+                    <span class="hint-text">Use WASD to explore</span>
+                    <div class="wasd-keys">
+                        <div class="key">W</div>
+                        <div class="key">A</div>
+                        <div class="key">S</div>
+                        <div class="key">D</div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-line"></div>
+            <span class="scroll-text">SCROLL</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-3d about-3d">
+        <canvas id="aboutCanvas" class="section-canvas"></canvas>
+        <div class="section-content">
+            <div class="section-header-3d">
+                <h2 class="section-title-3d">
+                    <span class="title-word">ABOUT</span>
+                    <span class="title-word">ME</span>
+                </h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="about-grid">
+                <div class="about-visual" id="aboutVisual">
+                    <div class="about-photo-wrapper">
+                        <img src="1000112215.jpg" alt="Vansh Maurya" class="about-photo">
+                    </div>
+                </div>
+                <div class="about-text-3d">
+                    <p class="about-paragraph">I'm a passionate web developer and artificial intelligence and machine
+                        learning learner specializing in immersive digital experiences using python, java, ML techniques,
+                        and modern web technologies.</p>
+                    <p class="about-paragraph">With a little-bit of experience in creative development, I bridge the gap
+                        between art and technology to create stunning interactive websites that push the boundaries of
+                        what's possible on the web.</p>
+                    <div class="about-details-3d">
+                        <div class="detail-card">
+                            <span class="detail-icon">📌</span>
+                            <span class="detail-text">Lucknow, Uttar Pradesh</span>
+                        </div>
+                        <div class="detail-card">
+                            <span class="detail-icon">✉</span>
+                            <span class="detail-text">vanshmaurya01234@gmail.com</span>
+                        </div>
+                        <div class="detail-card">
+                            <span class="detail-icon">📞</span>
+                            <span class="detail-text">+91 7652015646</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section-3d projects-3d">
+        <canvas id="projectsCanvas" class="section-canvas"></canvas>
+        <div class="section-content">
+            <div class="section-header-3d">
+                <h2 class="section-title-3d">
+                    <span class="title-word">MY</span>
+                    <span class="title-word">PROJECTS</span>
+                </h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="projects-grid-3d" id="projectsGrid3D">
+                <!-- Projects will be dynamically loaded as 3D cards -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section-3d skills-3d">
+        <canvas id="skillsCanvas" class="section-canvas"></canvas>
+        <div class="section-content">
+            <div class="section-header-3d">
+                <h2 class="section-title-3d">
+                    <span class="title-word">SKILLS</span>
+                    <span class="title-word">&</span>
+                    <span class="title-word">TECH</span>
+                </h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="skills-container-3d">
+                <div class="skills-grid-3d">
+                    <!-- <div class="skill-category-3d" data-category="3d">
+                        <h3 class="category-title">3D Graphics</h3>
+                        <div class="skills-list-3d" id="skills3D"></div>
+                    </div> -->
+                    <div class="skill-category-3d" data-category="web">
+                        <h3 class="category-title">Web Development</h3>
+                        <div class="skills-list-3d" id="skillsWeb"></div>
+                    </div>
+                    <div class="skill-category-3d" data-category="creative">
+                        <h3 class="category-title">Creative Tools</h3>
+                        <div class="skills-list-3d" id="skillsCreative"></div>
+                    </div>
+                    <div class="skill-category-3d" data-category="special">
+                        <h3 class="category-title">Specializations</h3>
+                        <div class="skills-list-3d" id="skillsSpecial"></div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-3d contact-3d">
+        <canvas id="contactCanvas" class="section-canvas"></canvas>
+        <div class="section-content">
+            <div class="section-header-3d">
+                <h2 class="section-title-3d">
+                    <span class="title-word">GET</span>
+                    <span class="title-word">IN</span>
+                    <span class="title-word">TOUCH</span>
+                </h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="contact-grid-3d">
+                <div class="contact-info-3d">
+                    <h3 class="contact-title">Let's Create Something Amazing</h3>
+                    <p class="contact-description">Ready to bring your digital vision to life? Let's discuss your next immersive web experience.</p>
+                    <div class="contact-links-3d">
+                        <a href="https://www.linkedin.com/in/vansh-maurya-7742b8315/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3B0rW5dk%2BtTBu8VuiAC9Piuw%3D%3D" target="_blank" class="social-link-3d">
+                            <span class="link-text">LinkedIn</span>
+                            <div class="link-glow"></div>
+                        </a>
+                        <a href="https://github.com/Er-Vansh" target="_blank" class="social-link-3d">
+                            <span class="link-text">GitHub</span>
+                            <div class="link-glow"></div>
+                        </a>
+                        <a href="https://x.com/vansh_maurya_05" target="_blank" class="social-link-3d">
+                            <span class="link-text">Twitter</span>
+                            <div class="link-glow"></div>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-form-3d">
+                    <form class="form-3d" id="contactForm3D">
+                        <div class="form-group-3d">
+                            <input type="text" id="name" name="name" class="form-input-3d" required>
+                            <label for="name" class="form-label-3d">Name</label>
+                            <div class="input-glow"></div>
+                        </div>
+                        <div class="form-group-3d">
+                            <input type="email" id="email" name="email" class="form-input-3d" required>
+                            <label for="email" class="form-label-3d">Email</label>
+                            <div class="input-glow"></div>
+                        </div>
+                        <div class="form-group-3d">
+                            <input type="text" id="subject" name="subject" class="form-input-3d" required>
+                            <label for="subject" class="form-label-3d">Subject</label>
+                            <div class="input-glow"></div>
+                        </div>
+                        <div class="form-group-3d">
+                            <textarea id="message" name="message" class="form-input-3d" rows="4" required></textarea>
+                            <label for="message" class="form-label-3d">Message</label>
+                            <div class="input-glow"></div>
+                        </div>
+                        <button type="submit" class="submit-btn-3d">
+                            <span class="btn-text">SEND MESSAGE</span>
+                            <div class="btn-particles" id="btnParticles"></div>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Modal -->
+    <div class="modal-3d hidden" id="projectModal3D">
+        <div class="modal-overlay-3d"></div>
+        <div class="modal-content-3d">
+            <button class="modal-close-3d" id="modalClose3D">
+                <span class="close-line"></span>
+                <span class="close-line"></span>
+            </button>
+            <div class="modal-body-3d" id="modalBody3D">
+                <!-- Modal content will be dynamically loaded -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer-3d">
+        <div class="footer-content">
+            <p class="footer-text">&copy; 2025 Vansh Maurya. Crafted with passion</p>
+            <div class="footer-particles" id="footerParticles"></div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
