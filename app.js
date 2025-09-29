@@ -24,7 +24,7 @@ class Portfolio3D {
                 linkedin: "https://www.linkedin.com/in/vansh-maurya-7742b8315/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3B0rW5dk%2BtTBu8VuiAC9Piuw%3D%3D",
                 github: "https://github.com/Er-Vansh",
                 twitter: "https://x.com/vansh_maurya_05",
-                website: "#",
+                website: "https://vansh-maurya-portfolio.vercel.app",
                 stats: {
                     experience: "1+",
                     projects: "10+",
@@ -38,9 +38,9 @@ class Portfolio3D {
                     shortDescription: "AI-powered excuse generator chatbot",
                     fullDescription: "An innovative web application that leverages advanced AI models to generate humorous and context-aware excuses for various situations. Features include a chat interface, customizable excuse categories, and social sharing options. Built with a focus on user experience and responsive design.",
                     technologies: ["Python", "FastAPI", "HTML", "JavaScript", "Gemini API"],
-                    image: "https://via.placeholder.com/800x500/ff0080/ffffff?text=Cyberpunk+City",
-                    githubUrl: "#",
-                    liveUrl: "#",
+                    image: "C:\Users\vansh\OneDrive\Pictures\Screenshots\Screenshot 2025-09-29 204636.png",
+                    githubUrl: "https://github.com/Er-Vansh/NotMyFault.AI",
+                    liveUrl: "https://notmyfaultai.vercel.app",
                     featured: true,
                     category: "AI Chatbot"
                 },
