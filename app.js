@@ -57,7 +57,7 @@ class Portfolio3D {
                     category: "Web Application"
                 },
                 {
-                    id: 3,
+                    id: 4,
                     title: "Echobot",
                     shortDescription: "Personal Voice Assistant",
                     fullDescription: "A voice-activated personal assistant web application that responds to user commands and queries. Features include speech recognition, and integration with various APIs for weather, news, and reminders. Designed for ease of use and accessibility.",
@@ -69,7 +69,7 @@ class Portfolio3D {
                     category: "Personal Assistant"
                 },
                 {
-                    id: 4,
+                    id: 5,
                     title: "Happily",
                     shortDescription: "Mental health tracking platform",
                     fullDescription: "A comprehensive mental health tracking platform that allows users to monitor their mood, and overall well-being. Features include daily mood logging, and data visualization. Built with a focus on user privacy and data security.",
@@ -81,16 +81,16 @@ class Portfolio3D {
                     category: "Health & Wellness"
                 },
                 {
-                    id: 5,
-                    title: "LearnSmartly",
-                    shortDescription: "Course Searching Platform",
-                    fullDescription: "A web application that aggregates online courses from various platforms, allowing users to search, filter, and compare courses based on their interests and learning goals. Features include user reviews, ratings, and personalized recommendations.",
-                    technologies: ["HTML", "CSS", "JavaScript", "Chatling"],
-                    image: "https://via.placeholder.com/800x500/ff6b6b/ffffff?text=Particle+Symphony",
-                    githubUrl: "#",
-                    liveUrl: "#",
+                    id: 3,
+                    title: "Pixify",
+                    shortDescription: "AI Image Enhancer",
+                    fullDescription: "A minimal React app that uploads an image and uses a remote enhancement API to upscale, denoise and restore images. Built with React, Axios and Tailwind CSS utility classes.",
+                    technologies: ["React.js", "TailwindCSS", "JavaScript", "Picwish"],
+                    image: "",
+                    githubUrl: "https://github.com/Er-Vansh/Image-Enhancer",
+                    liveUrl: "https://image-enhancer-xi.vercel.app/",
                     featured: false,
-                    category: "Education"
+                    category: "AI-integrated Web Application"
                 },
                 {
                     id: 6,
