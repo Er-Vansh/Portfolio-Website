@@ -57,6 +57,18 @@ class Portfolio3D {
                     category: "Web Application"
                 },
                 {
+                    id: 3,
+                    title: "Pixify",
+                    shortDescription: "AI Image Enhancer",
+                    fullDescription: "A minimal React app that uploads an image and uses a remote enhancement API to upscale, denoise and restore images. Built with React, Axios and Tailwind CSS utility classes.",
+                    technologies: ["React.js", "TailwindCSS", "JavaScript", "Picwish"],
+                    image: "",
+                    githubUrl: "https://github.com/Er-Vansh/Image-Enhancer",
+                    liveUrl: "https://image-enhancer-xi.vercel.app/",
+                    featured: true,
+                    category: "AI-integrated Web Application"
+                },
+                {
                     id: 4,
                     title: "Echobot",
                     shortDescription: "Personal Voice Assistant",
@@ -65,7 +77,7 @@ class Portfolio3D {
                     image: "https://via.placeholder.com/800x500/00ffff/ffffff?text=Neural+Network",
                     githubUrl: "https://github.com/Er-Vansh/EchoBot",
                     liveUrl: "#",
-                    featured: true,
+                    featured: false,
                     category: "Personal Assistant"
                 },
                 {
@@ -79,18 +91,6 @@ class Portfolio3D {
                     liveUrl: "#",
                     featured: false,
                     category: "Health & Wellness"
-                },
-                {
-                    id: 3,
-                    title: "Pixify",
-                    shortDescription: "AI Image Enhancer",
-                    fullDescription: "A minimal React app that uploads an image and uses a remote enhancement API to upscale, denoise and restore images. Built with React, Axios and Tailwind CSS utility classes.",
-                    technologies: ["React.js", "TailwindCSS", "JavaScript", "Picwish"],
-                    image: "",
-                    githubUrl: "https://github.com/Er-Vansh/Image-Enhancer",
-                    liveUrl: "https://image-enhancer-xi.vercel.app/",
-                    featured: false,
-                    category: "AI-integrated Web Application"
                 },
                 {
                     id: 6,
